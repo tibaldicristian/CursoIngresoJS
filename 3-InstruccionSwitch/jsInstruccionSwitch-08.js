@@ -1,6 +1,26 @@
+/*
+Autor: Tibaldi Cristian
+Ejercicio: Switch ejercicio 8
+*/
+
+
 function mostrar()
 {
-	var destinoIngresado =txtIdDestino.value;
-	alert(destinoIngresado);
-
-}//FIN DE LA FUNCIÓN
+	var destino;
+	destino=document.getElementById('txtIdDestino').value;
+	switch (destino)
+	{
+		case "Bariloche":
+		case "Ushuaia":
+			{
+				alert("Frio");
+				break;
+			}
+		case "Cataratas":
+		case "Mar del plata":
+			{
+				alert("Calor");
+				break;
+			}
+	}
+}

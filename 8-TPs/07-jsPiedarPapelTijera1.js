@@ -4,26 +4,87 @@ siendo 1 para “piedra”, el 2 para “papel” y 3 para “tijera”.
 El jugador seleccionará una imagen correspondiente 
 a su opción  y le informaremos si ganó, empató o perdió.
 */
+
 var eleccionMaquina;
+var aleatorio;
 
 function comenzar()
 {
-	
+    aleatorio=Math.random()*3 + 1;
+    aleatorio=parseInt(aleatorio);
+}
 
-
-}//FIN DE LA FUNCIÓN
 function piedra()
 {
-	
+    aleatorio=Math.random()*3 + 1;
+    aleatorio=parseInt(aleatorio);
 
-}//FIN DE LA FUNCIÓN
+	eleccionMaquina=aleatorio;
+    if (eleccionMaquina==1)
+    {
+        mensaje="Salio piedra. Empataste"; 
+    }
+    else
+    {
+        if (eleccionMaquina==2)
+        {
+            mensaje="Salio papel. Perdiste"; 
+        }
+        else
+        {
+            mensaje="Salio tijera. Ganaste";
+        }
+        
+    }
+    alert(mensaje)
+}
+
 function papel()
 {
+    aleatorio=Math.random()*3 + 1;
+    aleatorio=parseInt(aleatorio);
+    eleccionMaquina=aleatorio;
 
+    if (eleccionMaquina==1)
+    {
+        mensaje="Salio piedra. Ganaste";  
+    }
+    else
+    {
+        if (eleccionMaquina==2)
+        {
+            mensaje="Salio papel. Empataste"; 
+        }
+        else
+        {
+            mensaje="Salio tijera. Perdiste";
+        }
+        
+    }
+    alert(mensaje)
+}
 
-}//FIN DE LA FUNCIÓN
 function tijera()
 {
-	
-
-}//FIN DE LA FUNCIÓN
+    aleatorio=Math.random()*3 + 1;
+    aleatorio=parseInt(aleatorio);
+	eleccionMaquina=aleatorio;
+    
+    if (eleccionMaquina==1)
+    {
+        mensaje="Salio piedra. Perdiste"; 
+    }
+    else
+    {
+        if (eleccionMaquina==2)
+        {
+            mensaje="Salio papel. Ganaste"; 
+        }
+        else
+        {
+            mensaje="Salio tijera. Empataste";
+        }
+        
+    }
+    alert(mensaje)
+}

@@ -1,12 +1,21 @@
-//Al ingresar una edad debemos informar si la persona es adolescente, edad entre 13 y 17 años (inclusive) .
+/*Autor: Tibaldi Cristian
+Ejericio: 4 IF
+Comision: J
+
+Al ingresar una edad debemos informar si la persona es adolescente, edad entre 13 y 17 años (inclusive) .
+*/
 
 function mostrar()
 {	
 	var edad;
-	edad=parseInt(document.getElementById('txtIdEdad').value);
+	edad=document.getElementById('txtIdEdad').value;
+	edad=parseInt(edad);
 	
-	if (edad>=13 && edad<=17)
+	if (edad<18)
 	{
-		alert("Con " +edad+ " sos adolescente");
+		if (edad>12)
+		{
+			alert("Con " +edad+ " sos adolescente");
+		}
 	}
 }
